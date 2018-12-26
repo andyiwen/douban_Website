@@ -23,6 +23,12 @@ app.set('view engine','jade');                          // 设置模板引擎
 app.use(express.static(path.join(__dirname,'public'))); // 设置静态文件目录
 app.locals.moment = require('moment'); // 引入moment模块并设置为app.locals属性,用来格式化时间
 
+// 20160529
+// 1.先安装了mongodb － 默认路径
+// 2.启动数据库
+// 3.导入数据   `mongorestore --help`查看
+// mongorestore -h 127.0.0.1 -d douban --dir=/Users/andyiwen/Documents/andy/node-express-in-action/douban_Website/doubanDatabase/douban/
+
 // 对application/x-www-form-urlencoded格式内容进行解析
 app.use(bodyParser.urlencoded({ extended: true }));
 
